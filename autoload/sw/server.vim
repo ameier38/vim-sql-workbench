@@ -163,7 +163,7 @@ function! sw#server#start_sqlwb(handler, ...)
         echom g:sw_exe . " is not readable. Make sure the setting g:sw_exe is set and the file exists."
         let valid_exe = 0
     endif
-    if match(getfperm(g:sw_exe), "r.x.*") ==# -1
+    if match(getfperm(g:sw_exe), "rx.*") ==# -1
         echom g:sw_exe . " is not executable. Make sure the permissions are set correctly."
         let valid_exe = 0
     endif
